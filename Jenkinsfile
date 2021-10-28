@@ -10,9 +10,9 @@ pipeline {
         stage('test') {
             steps {
                 echo 'build test'
-                sh 'python --version'
-                sh 'pip install flask pytest'
-                sh 'export pythonpath=src;pytest'
+                bat 'python --version'
+                bat 'pip install flask pytest'
+                bat 'set pythonpath=src;pytest'
             }
         }
     }
